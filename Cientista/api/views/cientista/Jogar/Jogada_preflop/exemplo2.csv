@@ -1,0 +1,37 @@
+;HEROI;VILAO;CALL_BB_VALOR;CALL_BB_RANGE;REISE_BB_VALOR;REISE_BB_RANGE;CALL_OR_VALOR;CALL_OR_RANGE;REISE_OR_VALOR;REISE_OR_RANGE;CALL_3BET_VALOR;CALL_3BET_RANGE;REISE_3BET_VALOR;REISE_3BET_RANGE;CALL_4BET_VALOR;CALL_4BET_RANGE;REISE_4BET_VALOR;REISE_4BET_RANGE;CALL_5BET_VALOR;CALL_5BET_RANGE;REISE_5BET_VALOR;REISE_5BET_RANGE
+0;UTG;UTG;1.0; ;3.6; 22+  Ajo-Ako KQo 67s-kAs 9Js-QAs KTs Ajs Ats A2s-A5s;-1.0; ;-1.0;  ;-1.0; ;-1.0; ;-1.0; ;-1.0; ;0.0; ;-1.0; 
+1;UTG;MP;-1.0; ;-1.0; ;-1.0; ;-1.0;  ;1.0; QQ Ako+;3.0; KK;0.0; ;0.0; ;0.0; ;100.0; KK
+2;UTG;CO;-1.0; ;-1.0; ;-1.0; ;-1.0;  ;1.0; QQ-JJ Aqs Ako;3.0; KK;0.0; ;0.0; ;0.0; ;100.0; KK
+3;UTG;BTN;-1.0; ;-1.0; ;-1.0; ;-1.0;  ;1.0; QQ-99 Ajs Ako;3.0; KK Aks;0.0; ;0.0; ;0.0; ;100.0; KK Aks
+4;UTG;BB;-1.0; ;-1.0; ;-1.0; ;-1.0;  ;1.0; QQ Ako+;3.0; KK;0.0; ;0.0; ;0.0; ;100.0; KK
+5;UTG;SB;-1.0; ;-1.0; ;-1.0; ;-1.0; ;1.0; JJ Aqs+ Ako;3.0; KK;0.0; ;0.0; ;0.0; ;100.0; KK
+6;MP;UTG;-1.0; ;-1.0; ;1.0; JJ-88 AQ+ ;3.0; QQ+ Aks T9s JTs QJs KQs Ajs;0.0; ;0.0; ;0.0; ;100.0; QQ+ Aks;0.0; ;0.0; 
+7;MP;MP;1.0; ;1.0; ;-1.0; ;-1.0; ;-1.0; ;-1.0; ;-1.0; ;-1.0; ;0.0; ;-1.0; 
+8;MP;CO;-1.0; ;-1.0; ;-1.0; ;-1.0; ;1.0; 99 Ajs Ako;3.0; KK;0.0; ;0.0; ;0.0; ;100.0; KK
+9;MP;BTN;-1.0; ;-1.0; ;-1.0; ;-1.0; ;1.0; 88 Ats Aqo;3.0; KK Aks;0.0; ;0.0; ;0.0; ;100.0; KK Aks
+10;MP;BB;-1.0; ;-1.0; ;-1.0; ;-1.0; ;1.0; TT Aqs Ako;3.0; KK;0.0; ;0.0; ;0.0; ;100.0; KK
+11;MP;SB;-1.0; ;-1.0; ;-1.0; ;-1.0; ;1.0; 88 Ajs Aqo;3.0; KK Aks;0.0; ;0.0; ;0.0; ;100.0; KK Aks
+12;CO;UTG;-1.0; ;-1.0; ;1.0;JJ-88 AJs AQo+;3.0; QQ+ AKs T9s JTs QJs KQs Ats;0.0; ;0.0;;0.0; ;100.0; QQ+ Aks;0.0; ;0.0; 
+13;CO;MP;-1.0; ;-1.0; ;1.0; JJ-77 AJs+ AQo+ KQs;3.0; QQ+ AKo AQs 87s 98s T9s JTs QJs ATs KJs;0.0; ;0.0; ;0.0; ;100.0; QQ+ AKo AQs;0.0; ;0.0; 
+14;CO;CO;1.0; ;1.0; ;-1.0; ;-1.0; ;-1.0; ;-1.0; ;-1.0; ;-1.0; ;0.0; ;-1.0; 
+15;CO;BTN;-1.0; ;-1.0; ;-1.0; ;-1.0; ;1.0;88 Ats Ajo KQs;3.0; KK Aks;0.0; ;0.0; ;0.0; ;100.0; KK Aks
+16;CO;BB;-1.0; ;-1.0; ;-1.0; ;-1.0; ;1.0;99 Aqs Ako;3.0; KK Aks;0.0; ;0.0; ;0.0; ;100.0; KK Aks
+17;CO;SB;-1.0; ;-1.0; ;-1.0; ;-1.0; ;1.0;77 Ats Ajo KJs KQ JTs+;3.0; KK;0.0; ;0.0; ;0.0; ;100.0; KK
+18;BTN;UTG;-1.0; ;-1.0; ;1.0; JJ-77 ATs+ AQo+;3.0; QQ+ Aks 89s 9Ts TJs JQs QKs;0.0; ;0.0; ;0.0; ;100.0; QQ+ AKs;0.0; ;0.0; 
+19;BTN;MP;-1.0; ;-1.0; ;1.0; JJ-66 KQs Ats+ Ajo+ A5s KJs  ;3.0; QQ+ AKo AQs 67s 78s 89s 9Ts TJs JQs A5s-A2s QTs+ T8s J9s;0.0; ;0.0; ;0.0; ;100.0; QQ+ AKo AQs;0.0; ;0.0; 
+20;BTN;CO;-1.0; ;-1.0; ;1.0; TT-55 Axs+ AT+ KT K9s-J9s;3.0; JJ+ Ako+ Ajs+ 67s 78s 89s 9Ts TJs QJs A6s-A9s A4s-A2s J9s QTs;0.0; ;0.0; ;0.0; ;100.0; JJ+ Ako+ Ajs+;0.0; ;0.0; 
+21;BTN;BTN;1.0; ;1.0; ;-1.0; ;-1.0; ;-1.0; ;-1.0; ;-1.0; ;-1.0; ;0.0; ;-1.0; 
+22;BTN;BB;-1.0; ;-1.0; ;-1.0; ;-1.0; ;1.0; 88 Ats Ajo KQs;3.0; QQ Aks;0.0; ;0.0; ;0.0; ;100.0; QQ Aks
+23;BTN;SB;-1.0; ;-1.0; ;-1.0; ;-1.0; ;1.0; 77 Ats Ajo KJs KQ JTs+;3.0; QQ Aks;0.0; ;0.0; ;0.0; ;100.0; QQ Aks
+24;SB;UTG;-1.0; ;-1.0; ;1.0; JJ-99 Aqs Ako;3.0; QQ+ Aks JTs-KQs;0.0; ;0.0; ;0.0; ;100.0; QQ+ Aks;0.0; ;0.0; 
+25;SB;MP;-1.0; ;-1.0; ;1.0; JJ-88 Ajs Aqo;3.0; QQ+ Aks T9s-KQs Ats;0.0; ;0.0; ;0.0; ;100.0; QQ+ Aks;0.0; ;0.0; 
+26;SB;CO;-1.0; ;-1.0; ;1.0; JJ-77 AJ+ Ats+ JTs+;3.0; JJ+ Aqo+ Ajs+ 67s-9Ts A5s-A2s;0.0; ;0.0; ;0.0; ;100.0; JJ+ Aqo+ Ajs+;0.0; ;0.0; 
+27;SB;BTN;-1.0; ;-1.0; ;1.0; JJ-66 AT+ KQ+ QJs KTs+;3.0; JJ+ AQo+ Ajs+ 67s-9Ts A5s-A2s 97s-86s;0.0; ;0.0; ;0.0; ;100.0; JJ+ AQo+ Ajs+;0.0; ;0.0; 
+28;SB;SB;1.0; ;1.0; ;-1.0; ;-1.0; ;-1.0; ;-1.0; ;-1.0; ;-1.0; ;0.0; ;-1.0; 
+29;SB;BB;-1.0; ;-1.0; ;-1.0; ;-1.0; ;-1.0; 77 Ats Ajo KJs KQ JTs+;3.0; QQ Aks;0.0; ;0.0; ;0.0; ;100.0; QQ Aks
+30;BB;UTG;-1.0; ;-1.0; ;1.0; JJ-88 Ajs Aqo;3.0; QQ+ Aks T9s-KQs Ats;0.0; ;0.0; ;0.0; ;100.0;QQ+ Aks;0.0; ;0.0; 
+31;BB;MP;-1.0; ;-1.0; ;1.0; JJ-77 AJs+ AQo+ KQs;3.0; QQ+ Ako 89s-QJs A5s-A2s;0.0; ;0.0; ;0.0; ;100.0;QQ+ Ako;0.0; ;0.0; 
+32;BB;CO;-1.0; ;-1.0; ;1.0; JJ-66 AT+ KQ+ QJs KTs+;3.0;JJ+ Aqo+ Ajs+ 89s-QJs A5s-A2s;0.0; ;0.0; ;0.0; ;100.0;JJ+ Aqo+ Ajs+;0.0; ;0.0; 
+33;BB;BTN;-1.0; ;-1.0; ;1.0; JJ-66 AT+ KJ+ JTs+ KTs+;3.0;TT+ Aqo+ Ajs+ KQs+ 56s-QJs A9s-A2s J7s+ Q9s+ K8s+ 97s;0.0; ;0.0; ;0.0; ;100.0;TT+ Aqo+ Ajs+ KQs+;0.0; ;0.0; 
+34;BB;SB;-1.0; ;-1.0; ;1.0; TT-55 Axs+ AT+ KT K9s-J9s;3.0; TT+ Aqo+ Ajs+ KQs+ A6s-A9s 56s+ T8s+ Q7s+ K5s-K9s;0.0; ;0.0; ;0.0; ;100.0;TT+ Aqo+ Ajs+ KQs+;0.0; ;0.0; 
+35;BB;BB;1.0; ;1.0; ;-1.0; ;-1.0; ;-1.0; ;-1.0; ;-1.0; ;-1.0; ;0.0; ;-1.0; 
