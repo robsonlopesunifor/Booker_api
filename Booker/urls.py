@@ -17,15 +17,17 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import include
 from django.urls import path
+from django.conf.urls.static import static
+from django.conf import settings
 #-------------------------------------------------
 from rest_framework import routers #REST
 from Confronto.api.viewsets import ConfrontoViewSet
 from Historico.api.viewsets import HistoricoViewSet
-from Cenografo.api.viewsets import CenografoViewSet
+from Cenografo.viewsets.viewsets import CenografoViewSet
 from Cientista.api.viewsets import CientistaViewSet
 from Cientista.api.views.views import CientistaView
 #-----------------------------
-from django.conf import settings
+
 
 router = routers.DefaultRouter()
 router.register(r'confronto',ConfrontoViewSet, base_name='Confronto')
@@ -38,4 +40,4 @@ urlpatterns = [
     path('api/v1/',include(router.urls)),
     path(r'api/v1/cientista_analizar', CientistaView.as_view()),
     path('admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

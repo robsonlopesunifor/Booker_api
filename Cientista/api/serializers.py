@@ -63,6 +63,10 @@ class CustomListSerializer(ListSerializer):
             self.__dadosHistoricosDeJogadas(linha)
         return self.arvore_data
 
+    def imagemDaJogada(self):
+        print(self.data)
+        return self.data
+
     def __dadosBoard(self,linha):
         cartas = ['bord_FLOP_1','bord_FLOP_2','bord_FLOP_3','bord_TURN','bord_RIVER']
         dados_do_bord = {'etapa':linha['bord_etapa'],'cartas':[]}

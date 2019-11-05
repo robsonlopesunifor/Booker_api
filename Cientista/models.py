@@ -19,8 +19,20 @@ class CientistaQuerySet(QuerySet):
                                 Q(data__gte=data_inicial) & 
                                 Q(data__lte=data_final) &
                                 Q(mao=mao)).order_by('data')
-        return queryset[0 : jogada] 
+        return queryset[0 : (jogada+1) ] 
 
+    def jogadasPorMao(self,mao):
+        queryset = self.filter(Q(mao=mao)).order_by('data')
+        return queryset
+
+    def jogadaPorCordenada(self,mao,jogada):
+        queryset = self.filter(Q(mao=mao)).order_by('data')
+        return queryset[jogada]
+
+    def deletarMao(self,mao):
+        queryset = self.filter(Q(mao=mao)).order_by('data')
+        queryset.delete()
+        return queryset
 
     def ultima_jogada(self,tela=0):
         return [self.filter(tela=tela).order_by('-data')[0]]
@@ -29,11 +41,16 @@ class CientistaQuerySet(QuerySet):
         queryset = self.filter(tela=tela).order_by('-data')[0]
         return self.filter(mao=queryset.mao,tela=tela).order_by('data')
 
+    def jogadasPorMao(self,mao):
+        return self.filter(mao=mao).order_by('data')
+
     def cientista_processado(self):
         queryset = self.filter(cientista_processado=False).order_by('data')[0]
         queryset.update(set__cientista_processado=True)
         queryset.reload()
         return queryset
+
+    
 
 class ValidarFicheiro(Document):
 

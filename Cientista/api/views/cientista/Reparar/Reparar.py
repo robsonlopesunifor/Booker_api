@@ -44,4 +44,4 @@ class Reparar(object):
         self.reparar_pote.reparar(index)
         self.reparar_adicionar_degral.reparar(index)
         self.reparar_adicionar_linha.reparar(index)
-        #self.reparar_vez.reparar(index)
+        self.reparar_vez.reparar(index)

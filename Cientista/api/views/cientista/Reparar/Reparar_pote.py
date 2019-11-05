@@ -22,7 +22,7 @@ class Reparar_pote(Auxiliar):
             pote_rodada = float(self.dataframe.loc[index,('pote_rodada')])
             soma_das_apostas = self.__somar_apostas(index)
             pote_atualizado = (soma_das_apostas + pote_rodada)
-            self.dataframe.loc[index,('pote')] = pote_atualizado
+            self.dataframe.loc[index,('pote')] = abs(round(pote_atualizado,2))
 
     def __somar_apostas(self,index):
         total = 0

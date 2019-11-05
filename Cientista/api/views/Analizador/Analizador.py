@@ -8,7 +8,8 @@ from Cientista.models import Cientista
 
 class Analizador(threading.Thread):
 
-    def __init__(self):
+    def __init__(self,espera=1):
+        self.espera = espera
         self.lista_de_cartas = []
         self.pandas = pd.DataFrame()
         self.cientista = cientista.Cientista(self.lista_de_cartas, self.pandas)
@@ -19,7 +20,7 @@ class Analizador(threading.Thread):
 
     def registrar(self):
         index = 0
-        while index <= 10000:
+        while index <= self.espera:
             if Cena.objects.quantidade_cientista_pendente() > 0:
                 print(Cena.objects.quantidade_cientista_pendente())
                 carta = Cena.objects.primeiro_cientista_pendente()

@@ -23,6 +23,7 @@ class Reparar_adicionar_degral(Auxiliar):
         letra = self.__era_para_ter_decral(index)
         if letra != 'null':
             self.dataframe.loc[index + 1] = self.dataframe.loc[index]
+            self.dataframe.loc[index,('linha')] = 'nova'
             self.__reorganizar_hord_card(index,letra)
 
     def __reorganizar_hord_card(self,index,letra_):

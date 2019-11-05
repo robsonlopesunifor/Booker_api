@@ -35,21 +35,32 @@ class Regra_vez(Auxiliar):
             if self.tem_mais_de_um(index):
                 letra = self.__retornar_vez_valido(index_anterior)
                 proxima_letra = self.__proximo_vez_valido(index,letra)
-                self.__marcar_vez(index,proxima_letra)
+                self.__marcar_vez_ecesso(index,proxima_letra)
             else:
                 self.__marcar_vez_errado(index)
         elif quantidade == 0:
-            pass
+            if self.tem_mais_de_um(index):
+                letra = self.__retornar_vez_valido(index_anterior)
+                proxima_letra = self.__proximo_vez_valido(index,letra)
+                self.__marcar_vez_falta(index,proxima_letra)
+            else:
+                self.__marcar_vez_errado(index)
 
-    def __marcar_vez(self,index,letra_):
+    def __marcar_vez_ecesso(self,index,letra_):
+        self.__marcar_vez(index,letra_,False)
+
+    def __marcar_vez_falta(self,index,letra_):
+        self.__marcar_vez(index,letra_,True)
+
+    def __marcar_vez(self,index,letra_,inverter = False):
         for idx,letra in enumerate(self.lista_letras):
             vez_str = "".join(['vez_',letra])
             valido_vez_str = "".join(['valido_vez_',letra])
             vez = self.dataframe.loc[index,(vez_str)]
-            if vez == True and letra_ != letra:
-                self.dataframe.loc[index,(valido_vez_str)] = False
+            if letra_ != letra:
+                self.dataframe.loc[index,(valido_vez_str)] = False if inverter == False else True
             else:
-                self.dataframe.loc[index,(valido_vez_str)] = True
+                self.dataframe.loc[index,(valido_vez_str)] = True if inverter == False else False
                 
     def __marcar_vez_correto(self,index):
         for idx,letra in enumerate(self.lista_letras):

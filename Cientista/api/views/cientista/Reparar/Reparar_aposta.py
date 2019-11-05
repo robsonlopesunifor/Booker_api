@@ -47,7 +47,7 @@ class Reparar_aposta(Auxiliar):
         aposta_esperada = (fichas_anterior - fichas_aual + aposta_anterior)
         if aposta_esperada < 0:
             aposta_esperada = aposta_esperada*(-1)
-        self.dataframe.loc[index,(aposta)] = aposta_esperada
+        self.dataframe.loc[index,(aposta)] = abs(round(aposta_esperada,2))
 
     def __ordenar_lista_pelo_diler(self,index):
         lista_letras = copy.deepcopy(self.lista_letras)

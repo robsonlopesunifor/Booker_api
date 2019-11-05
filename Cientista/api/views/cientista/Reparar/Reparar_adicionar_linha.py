@@ -40,6 +40,7 @@ class Reparar_adicionar_linha(Auxiliar):
 
     def __criar_caso_jogador_anterior_esteja_ativo(self,index,letra):
         if self.__jogador_anterior_a_esquerda_esta_ativo(index,letra):
+            self.dataframe.loc[index,('linha')] = 'nova'
             self.dataframe.loc[index + 1] = self.dataframe.loc[index]
             self.__reorganizar_vez_e_hord_card(index,letra)
             self.__reorganizar_vez_e_hord_card(index+1,self.__letra_a_direita(letra))

@@ -4,7 +4,9 @@ from rest_framework_mongoengine import viewsets
 import pandas as pd
 import datetime
 from Cientista.models import Cientista
+from Cenografo.models import Cena
 from .serializers import CientistaSerializer
+from Cenografo.serializers import CenaSerializer
 
 
 
@@ -67,6 +69,15 @@ class CientistaViewSet(viewsets.ModelViewSet):
         return Response(lista_de_jogadas_por_mao)
 
     @action(methods=['get'], detail=False)
+    def jogadasPorMao(self, request):
+        mao = request.query_params.get('mao',None)
+
+        queryset = Cientista.objects.jogadasPorMao(mao)
+        serializer = self.get_serializer(queryset, many=True)
+        
+        return Response(serializer.data)
+
+    @action(methods=['get'], detail=False)
     def jogadasPorCordenadas(self, request):
         data = request.query_params.get('data',None)
         tela = int(request.query_params.get('tela',-1))
@@ -100,6 +111,20 @@ class CientistaViewSet(viewsets.ModelViewSet):
         queryset = Cientista.objects.ultima_jogada(0)
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.confronto_ultima_jogada())
+
+    @action(methods=['get'], detail=False)
+    def imagemPorCordenada(self, request):
+        tela = int(request.query_params.get('tela',-1))
+        mao = int(request.query_params.get('mao',-1))
+        jogada = int(request.query_params.get('jogada',-1))
+
+        queryset = Cientista.objects.jogadaPorCordenada(mao,jogada)
+        data_str = str(queryset.data)
+        data_fatiada = data_str.split(" ")
+        data_fatiada[1] = data_fatiada[1].replace(':','-')
+        data_fatiada[1] = data_fatiada[1].replace('.','-')
+        url = "".join(['imagens/',data_fatiada[0],'/',data_fatiada[1],'.jpg'])
+        return Response({'url':url})
 
 
 

@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 from mongoengine import Document, EmbeddedDocument, fields, QuerySet
+from mongoengine.queryset.visitor import Q
 
 class CenaManager(models.Manager):
 
@@ -20,6 +21,13 @@ class CenaQuerySet(QuerySet):
     def cientista_processado(self):
         queryset = self.filter(cientista_processado=False).order_by('data')[0]
         queryset.update(set__cientista_processado=True)
+        queryset.reload()
+        return queryset
+
+    def esquecer_cientista_processado(self,tela,data):
+        queryset = self.filter( Q(tela=tela) & 
+                                Q(data__gte=data)).order_by('data')[0]
+        queryset.update(set__cientista_processado=False)
         queryset.reload()
         return queryset
 
@@ -95,6 +103,7 @@ class Cena(Document):
     foto = fields.StringField(required="",null=True) # propria imagem
     fotografo_processado = fields.BooleanField() # indicador de foto tirada
     endereco_imegem = fields.StringField(required="",null=True) # endereco de onde a foto foi salva
+    foto_registrada = fields.BooleanField()
     foto_salva = fields.BooleanField() # Indicador de foto salva
 
     cena = fields.EmbeddedDocumentField(Ficheiro,required=True) # fichario

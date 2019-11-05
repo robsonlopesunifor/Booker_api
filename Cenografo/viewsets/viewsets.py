@@ -2,8 +2,8 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework_mongoengine import viewsets
 from Cenografo.models import Cena
-from .serializers import CenaSerializer
-
+from ..serializers import CenaSerializer
+from . import SalvarImagens
 
 class CenografoViewSet(viewsets.ModelViewSet):
     lookup_field = 'id'
@@ -31,3 +31,10 @@ class CenografoViewSet(viewsets.ModelViewSet):
         queryset = Cena.objects.cientista_processado()
         serializer = self.get_serializer(queryset)
         return Response(serializer.data)
+
+    @action(methods=['post'], detail=False)  # detail=False Nao passa a PK
+    def salvar_imagens_do_redis(self, request):
+        salvarImagens = SalvarImagens.SalvarImagens('imagens_pyker','localhost',6379)
+        salvarImagens.start()
+        salvarImagens.join()
+        return Response({'Imagens salvas'})

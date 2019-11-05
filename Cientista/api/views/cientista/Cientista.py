@@ -57,3 +57,4 @@ class Cientista(object):
                     ficheiro_alinhado.setdefault("".join([chave,'_',sub_chave]),ficheiro[chave][sub_chave])
         for chave in ficheiro_alinhado:
             self.dataframe.loc[total_de_linhas,(chave)] = ficheiro_alinhado[chave]
+            
