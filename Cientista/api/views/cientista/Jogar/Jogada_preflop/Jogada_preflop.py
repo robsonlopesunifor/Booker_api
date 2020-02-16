@@ -111,7 +111,7 @@ class Jogada_preflop:
         range_ = range_.replace('O','o')
         return range_
 
-
+"""
 class Jogada_preflop_test(unittest.TestCase):
 
     def heroi_vs_vilao(self):
@@ -134,7 +134,7 @@ class Jogada_preflop_test(unittest.TestCase):
         assert estrategia.jogada('KsKc') == 3.6
         assert estrategia.jogada('AsAc') == 3.6
         # AJo+
-        """
+        
         assert estrategia.combo_esta_no_renge_de_reise('AsJc') == True
         assert estrategia.combo_esta_no_renge_de_reise('AsQs') == True
         assert estrategia.combo_esta_no_renge_de_reise('AsKc') == True
@@ -170,7 +170,7 @@ class Jogada_preflop_test(unittest.TestCase):
         assert estrategia.combo_esta_no_renge_de_reise('7s3c') == False
         assert estrategia.combo_esta_no_renge_de_reise('Kc7s') == False
         assert estrategia.combo_esta_no_renge_de_reise('Qs5s') == False
-        """
+        
         estrategia.definir_heroi_vilao_e_bet('CO','UTG','OR')
         assert estrategia.jogada('9s9c') == 1
 
@@ -225,3 +225,4 @@ class Jogada_preflop_test(unittest.TestCase):
 if __name__ == "__main__":
     print('____Teste da classe Estragia_csv')
     unittest.main()
+"""
